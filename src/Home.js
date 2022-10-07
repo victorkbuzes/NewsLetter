@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './context/AuthProvider'
 import { auth, db } from './firebase/firebase-config';
 import { signOut } from "firebase/auth";
-import { Footer } from './components/Footer';
 
 
 
@@ -48,31 +47,45 @@ export default function Home() {
     e.preventDefault();
 
   };
+
   
+//   const nodemailer = require("nodemailer");
+//  let transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     type: "OAuth2",
+//     user: process.env.EMAIL,
+//     pass: process.env.WORD,
+//     clientId: process.env.OAUTH_CLIENTID,
+//     clientSecret: process.env.OAUTH_CLIENT_SECRET,
+//     refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+//   },
+//  });
+
+//  transporter.verify((err, success) => {
+//   err
+//     ? console.log(err)
+//     : console.log(`=== Server is ready to take messages: ${success} ===`);
+//  });
+
+//  let mailOptions = {
+//   from: email,
+//   to: process.env.EMAIL,
+//   subject: "Nodemailer API",
+//   text: "Hi from your nodemailer API",
+//  };
+//  transporter.sendMail(mailOptions, function (err, data) {
+//   if (err) {
+//     console.log("Error " + err);
+//   } else {
+//     console.log("Email sent successfully");
+//   }
+//  });
+ 
+ 
 
 
-  // let transporter = nodemailer.createTransport({
-  //   service: 'gmail',
-  //   auth: {
-  //     user: 'victorkbuzes@gmail.com',
-  //     pass: '33947267'
-  //   }
-  // });
 
-  // const mailOptions = {
-  //   from: 'youremail@gmail.com',
-  //   to: email,
-  //   subject: 'Deakin Newsletter',
-  //   text: 'Welcome to our news Letter!'
-  // };
-
-  //  transporter.sendMail(mailOptions, function(error, info){
-  //   if (error) {
-  //     console.log(error);
-  //   } else {
-  //     console.log('Email sent: ' + info.response);
-  //   }
-  // });
   
 
 
@@ -142,7 +155,11 @@ export default function Home() {
     <div>
       {currentUser && <h1> Welcome {userName}</h1>}
     </div>
+
+  
  
+
+
 
   </div>
   

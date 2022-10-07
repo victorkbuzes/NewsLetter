@@ -1,139 +1,66 @@
-import React from "react";
+import React from 'react';
+import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
 
 export const Footer = () => {
   return (
-    <div>
-      <div class="container my-5">
-        <footer
-          class="text-center text-lg-start text-white"
-          style="background-color: #ecf0f1"
-        >
-          <div class="container p-4 pb-0">
-            <section class="">
-              <div class="row">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">
-                    DevDeakin
-                  </h6>
-                  <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
-                  </p>
-                </div>
-
-                <hr class="w-100 clearfix d-md-none" />
-
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Explore</h6>
-                  <p>
-                    <a class="text-white">Home</a>
-                  </p>
-                  <p>
-                    <a class="text-white">Question</a>
-                  </p>
-                  <p>
-                    <a class="text-white">Articles</a>
-                  </p>
-                  <p>
-                    <a class="text-white">Tutorials</a>
-                  </p>
-                </div>
-
-                <hr class="w-100 clearfix d-md-none" />
-
-                <hr class="w-100 clearfix d-md-none" />
-
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Support</h6>
-                  <p>
-                    <i class="fas fa-home mr-3"></i> FAQs
-                  </p>
-                  <p>
-                    <i class="fas fa-envelope mr-3"></i> Help
-                  </p>
-                  <p>
-                    <i class="fas fa-phone mr-3"></i> Support
-                  </p>
-                  <p>
-                    <i class="fas fa-print mr-3"></i> Contact us
-                  </p>
-                </div>
-
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">
-                    Follow us
-                  </h6>
-
-                  <a
-                    class="btn btn-primary btn-floating m-1"
-                    style="background-color: #3b5998"
-                    href="#!"
-                    role="button"
-                  >
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-
-                  <a
-                    class="btn btn-primary btn-floating m-1"
-                    style="background-color: #55acee"
-                    href="#!"
-                    role="button"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </a>
-
-                  <a
-                    class="btn btn-primary btn-floating m-1"
-                    style="background-color: #dd4b39"
-                    href="#!"
-                    role="button"
-                  >
-                    <i class="fab fa-google"></i>
-                  </a>
-
-                  <a
-                    class="btn btn-primary btn-floating m-1"
-                    style="background-color: #ac2bac"
-                    href="#!"
-                    role="button"
-                  >
-                    <i class="fab fa-instagram"></i>
-                  </a>
-
-                  <a
-                    class="btn btn-primary btn-floating m-1"
-                    style="background-color: #0082ca"
-                    href="#!"
-                    role="button"
-                  >
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
-                    class="btn btn-primary btn-floating m-1"
-                    style="background-color: #333333"
-                    href="#!"
-                    role="button"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <div
-            class="text-center p-3"
-            style="background-color: rgba(0, 0, 0, 0.2)"
-          >
-            © 2020 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">
-              DevDeakin
+    <CDBFooter className=" footer shadow">
+      <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
+        <CDBBox display="flex" justifyContent="between" className="flex-wrap">
+          <CDBBox>
+            <a href="/" className="d-flex align-items-center p-0 text-dark">
+         
+              <span className="ml-3 h5 font-weight-bold">Deakin</span>
             </a>
-          </div>
-        </footer>
-      </div>
-    </div>
+            <p className="my-3" style={{ width: '250px' }}>
+              We are creating High Quality Resources and tools to Aid developers during the
+              developement of their projects
+            </p>
+            <CDBBox display="flex" className="mt-4">
+              <CDBBtn flat color="dark">
+                <CDBIcon fab icon="facebook-f" />
+              </CDBBtn>
+              <CDBBtn flat color="dark" className="mx-3">
+                <CDBIcon fab icon="twitter" />
+              </CDBBtn>
+              <CDBBtn flat color="dark" className="p-2">
+                <CDBIcon fab icon="instagram" />
+              </CDBBtn>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+              Deakin
+            </p>
+            <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+              <CDBFooterLink href="/">Resources</CDBFooterLink>
+              <CDBFooterLink href="/">About Us</CDBFooterLink>
+              <CDBFooterLink href="/">Contact</CDBFooterLink>
+              <CDBFooterLink href="/">Blog</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+              Help
+            </p>
+            <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+              <CDBFooterLink href="/">Support</CDBFooterLink>
+              <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+              <CDBFooterLink href="/">Sign In</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+              Products
+            </p>
+            <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+              <CDBFooterLink href="/">Windframe</CDBFooterLink>
+              <CDBFooterLink href="/">Loop</CDBFooterLink>
+              <CDBFooterLink href="/">Contrast</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+        </CDBBox>
+        <small className="text-center mt-5">&copy; Deakins, 2022. All rights reserved.</small>
+      </CDBBox>
+    </CDBFooter>
   );
 };
-

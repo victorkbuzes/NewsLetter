@@ -4,6 +4,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Home from "./Home";
 import { AuthProvider } from "./context/AuthProvider";
+import { Footer } from "./components/Footer";
 
 
 function App() {
@@ -15,9 +16,17 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
+
+        <Footer />
+
+     
     </div>
 
+
+
     </AuthProvider>
+
+ 
   
   );
 }
