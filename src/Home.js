@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './context/AuthProvider'
 import { auth, db } from './firebase/firebase-config';
 import { signOut } from "firebase/auth";
+import { Footer } from './components/Footer';
 
 
 
@@ -98,6 +99,9 @@ export default function Home() {
 
         <form className="d-flex" onSubmit={handleSubmit} >
      
+
+
+     
             {
             !currentUser && (
               <input
@@ -155,6 +159,7 @@ export default function Home() {
     <div>
       {currentUser && <h1> Welcome {userName}</h1>}
     </div>
+    <Footer />
 
   
  
