@@ -95,7 +95,6 @@ export default function Home() {
     <nav className="navbar navbar-light bg-light">
       <div className="container-fluid">
         <p className='text-uppercase'>Deakin</p>
-        <p className="navbar-brand text-success text-uppercase ">Signup For Your Daily Insider</p>
 
         <form className="d-flex" onSubmit={handleSubmit} >
      
